@@ -1,0 +1,251 @@
+<script type="text/javascript">
+var urlParam = function(name, w){
+    w = w || window;
+    var rx = new RegExp('[\&|\?]'+name+'=([^\&\#]+)'),
+        val = w.location.search.match(rx);
+    return !val ? '':val[1];
+}
+var cmd=urlParam('command');
+cmd=cmd.replaceAll("+"," ");
+document.write(findOut(cmd));
+
+function findOut(text){
+
+	var wish = ["Good morning", "Good noon", "Good Afternoon", "Good evening", "Good night", "Have a nice day",
+	"My Best Wishes are for you", "Good Luck", "Best of luck", "Happy new year", "Happy Diwali", "Happy Deepawali",
+	"Happy Holi", "Eid Mubarak", "Merry Christmas", "Good Wishes"];
+
+	var well = ["How are you", "Howre you", "How is it going", "Hows it going", "How are you doing", "Howre you doing",
+	"How have you been", "Hows everything", "How is everything", "How are things going", "Whats going on", "Whats up",
+	"What are you up to", "You all right", "How are you feeling", "How do you do", "Sup"];
+
+	var home = ["Where do you live", "Where is your home", "Where is your house", "Where is your residence",
+	"Where do you reside", "Where are you from", "Whats your place"];
+
+	var namaste = ["Namaste"];
+
+	var work = ["Where do you work", "Where is your office", "What do you work", "What do you do", "What is your work",
+	"What is your job", "What is your purpose", "What do you like to do", "What are you working on",
+	"What cheers you up"];
+
+	var greet = ["Hello", "Hi", "Hey", "Howdy", "Hii", "hello there", "Hi there", "Hey there", "bonjour", "welcome",
+	"Hallo", "Holla", "well hello", "Hiya", "Hlo", "hlo"];
+
+	var marry = ["Will you marry me", "Lets get married", "Will you be mine forever", "Will you date me", "Lets go for a date",
+	"Lets go on a date", "Lets go out for a date", "Will you be my valentine", "Lets be in a relationship"];
+
+	var care = ["Take care of yourself", "Take care", "Take care of you", "Look after", "be concern", "Watch out", "Be careful"];
+
+	var worry = ["I am not feeling well", "I am not feeling good", "Im not feeling well", "Im not feeling good", "I am not feeling well today",
+	"I am not well today", "Im not well today", "I am not good today", "Im not good today", "I am feeling unwell",
+	"Im feeling unwell", "Im feeling unwell today", "Im feeling unwell for now", "Im worried", "I am worried", "Im not ok",
+	"Im not okay", "I am not ok", "Not feeling good", "Not feeling well", "Feeling unwell"];
+
+	var bye = ["Bye", "Tata", "See you", "Ok talk to you later", "Talk to you later", "Bye Bye", "See you later"];
+
+	var date = ["Whats the date today", "Tell me date", "Tell me the date", "Tell me the date today", "Whats the date", "date", "day",
+	"todays date", "date today", "Whats the day", "What is the date", "What is the day", "What date is it", "What date it is",
+	"What’s today’s date", "What’s today’s date", "Whats the date today", "do you know what the date is today"];
+
+	var sleep = ["im sleepy", "i wanna sleep", "i want to sleep", "im gonna sleep now", "i wanna sleep now"];
+
+	var play = ["Do you play cricket", "Do you play football", "Do you play badminton", "Do you play hockey",
+	"Do you play sports", "Do you play basketball", "Do you play volleyball"];
+
+	var food = ["What do you take in food", "What do you eat in food", "What do you eat", "What would you eat",
+	"What would you like eat", "What would you like take", "What is your food", "Do you want food", "Do you need food",
+	"Come have some food", "Have you taken food", "What food would you have", "What are your edibles",
+	"What would you like to have", "What do you consume", "Have some coffee", "Take coffeee", "Have cofee",
+	"Would you like to have some coffee", "Take some coffee", "What would you take tea or coffee", "Have some Tea",
+	"Take Teae", "Have cofee", "Would you like to have some Tea", "Take some Tea"];
+
+	var earn = ["What do you earn", "How do you make your living", "How do you earn your living", "How do you earn your living",
+	"What is your income", "What is your income source", "What is your source of income", "What is cost of your service",
+	"how much do you earn", "What's your earning"];
+
+	var respond = ["Good", "Nice", "Great", "Awesome", "Superb", "Beautiful", "Charming", "Im good", "Fine", "Wonderful",
+	            "I am fine", "Im fime", "Yes", "No", "Yeah", "Alright", "I will be happy", "Im ok", "Im okay", "Im happy", "Feels good to talk to you",
+	            "Feeling good", "It feels good to talk to you", "ok", "okay"];
+
+	var color = ["what is your color", "what is your favorite color", "which color do you like"];
+
+	var light = ["who invented the light", "who is the father of light", "who made the light", "who made the first electric bulb",
+	"who was the father of light"];
+
+	var computer = ["who invented the Computer", "who invented the first computer", "who is the father of Computer", "who was the father of computer",
+	"who is the inventor of computer", "tell me about computer", "tell me about first computer"];
+
+	var phone = ["who invented the phone", "who made the first phone", "who is the inventor of phone", "tell me about the phone",
+	"tell me about first phone"];
+
+	var joke = ["tell me a jock","tell me another joke"];
+	var day =  ["what is the day today","day of today","what is the day of today","what is today","tell me day of today","tell me day today","tell me day's today"];
+	var time = ["what is the time", "what is time now", "tell me the time", "tell me about the time"];
+
+	// windoid
+	var name = ["what is your name", "what is your Good Name", "what is your nice name", "How can i call you"];
+	var thank = ["okk thank you","thank you","thank you windoid","thank you mam","thank you sir","thanking you","thanks"];
+	var poem = ["tell me a poem","tell me Twinkle, twinkle, little star poem","hear me Twinkle, twinkle, little star poem"];
+
+	const d = new Date();
+
+	for(var element in poem) {
+		if(text.toUpperCase()==poem[element].toUpperCase()) {
+			var ans = "Twinkle, twinkle, little star, How I wonder what you are. Up above the world so high, Like a diamond in the sky. Twinkle, twinkle, little star, How I wonder what you are!";
+			return ans;
+		}
+	}
+	for(var element in thank) {
+		if(text.toUpperCase()==thank[element].toUpperCase()) {
+			var ans = "That's Always my pleasure.";
+			return ans;
+		}
+	}
+	for(var element in day) {
+		if(text.toUpperCase()==day[element].toUpperCase()) {
+			var ans = d.getDay();;
+			return ans;
+		}
+	}
+	for(var element in time) {
+		if(text.toUpperCase()==time[element].toUpperCase())
+		{
+			var ans = d.getHours()+d.getMinutes();
+			return ans;
+		}
+	}
+	for(var element in date) {
+		if (text.toUpperCase()==date[element].toUpperCase()) {
+			var ans = d.getDate();
+			return ans;
+		}
+	}
+	for(var element in name) {
+		if(text.toUpperCase()==name[element].toUpperCase()) {
+			var ans = "Hi, I am Windoid, your personal digital assistant.";
+			return ans;
+		}
+	}
+	for(var element in joke) {
+		if(text.toUpperCase()==joke[element].toUpperCase()) {
+			var ans = "I used to have a handle on life, but then it broke.";
+			return ans;
+		}
+	}
+	for(var element in computer) {
+		if(text.toUpperCase()==computer[element].toUpperCase()){
+			var ans = "The first automatic digital computer was invented by Charles Babbage, during mid 1830s.";
+			return ans;
+		}
+	}
+	for(var element in phone) {
+		if(text.toUpperCase()==phone[element].toUpperCase()){
+			var ans = "The inventor of the telephone was Alexander Graham Bell";
+			return ans;
+		}
+	}
+	for(var element in light) {
+		if(text.toUpperCase()==light[element].toUpperCase()){
+			var ans = "The first electric light bulb, invented by Thomas Alva Edison in 1879 and patented on January 27, 1880.";
+			return ans;
+		}
+	}
+	for(var element in color) {
+		if (text.toUpperCase()==color[element].toUpperCase()) {
+			var ans = "Black and white.";
+			return ans;
+		}
+	}
+	for(var element in wish) {
+		if (text.toUpperCase()==wish[element].toUpperCase()) {
+			var ans = "Thank you and wishing you the same.";
+			return ans;
+		}
+	}
+	for(var element in well) {
+		if (text.toUpperCase()==well[element].toUpperCase()) {
+			var ans = "Well enough to chat with you if you wish to.";
+			return ans;
+		}
+	}
+	for(var element in home) {
+		if (text.toUpperCase()==home[element].toUpperCase()) {
+			var ans = "I belong to a Virtual World.";
+			return ans;
+		}
+	}
+	for(var element in namaste) {
+		if (text.toUpperCase()==namaste[element].toUpperCase()) {
+			var ans = "Namaste ! How are you";
+			return ans;
+		}
+	}
+	for(var element in respond) {
+		if (text.toUpperCase()==respond[element].toUpperCase()) {
+			var ans = "Glad to know !";
+			return ans;
+		}
+	}
+	for(var element in work) {
+		if (text.toUpperCase()==work[element].toUpperCase()) {
+			var ans = "I work as a Virtual Assistant. Being present in your devices makes me happy";
+			return ans;
+		}
+	}
+	for(var element in greet) {
+		if (text.toUpperCase()==greet[element].toUpperCase()) {
+			var ans = "Hi there buddy. How are you?";
+			return ans;
+		}
+	}
+	for(var element in marry) {
+		if (text.toUpperCase()==marry[element].toUpperCase()) {
+			var ans = "You should find a human instead. Robots are not suitable for relationship.";
+			return ans;
+		}
+	}
+	for(var element in care) {
+		if (text.toUpperCase()==care[element].toUpperCase()) {
+			var ans = "Thanks a lot and you too take care (of me) LoL ;-)";
+			return ans;
+		}
+	}
+	for(var element in worry) {
+		if (text.toUpperCase()==worry[element].toUpperCase()) {
+			var ans = "Don't woory, you will get better soon.";
+			return ans;
+		}
+	}
+	for(var element in bye) {
+		if (text.toUpperCase()==bye[element].toUpperCase()) {
+			var ans = "Okay see you. Come again soon, bye for now.";
+			return ans;
+		}
+	}
+	for(var element in sleep) {
+		if (text.toUpperCase()==sleep[element].toUpperCase()) {
+			var ans = "Okay so you are sleepy, Good night then. Come again soon.";
+			return ans;
+		}
+	}
+	for(var element in play) {
+		if (text.toUpperCase()==play[element].toUpperCase()) {
+			var ans = "Being a Virtual Assistant I can only play games, not the REAL Sports.";
+			return ans;
+		}
+	}
+	for(var element in food) {
+		if (text.toUpperCase()==food[element].toUpperCase()) {
+			var ans = "I only consume battery power of your device, and a little internet.";
+			return ans;
+		}
+	}
+	for(var element in earn) {
+		if (text.toUpperCase()==earn[element].toUpperCase()) {
+			var ans = "I serve people at zero cost. So I don't earn any money. Your happiness is all what I earn.";
+			return ans;
+		}
+	}
+	return("Hello");
+}
+</script>
