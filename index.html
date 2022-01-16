@@ -7,7 +7,7 @@ var urlParam = function(name, w){
 }
 var cmd=urlParam('command');
 cmd=cmd.replaceAll("+"," ");
-document.write(findOut(cmd));
+document.getElementById('response').innerHTML = findOut(cmd);
 
 function findOut(text){
 
